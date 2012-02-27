@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>UNLIMITED QR PORTAL</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	<!-- jQUERY -->
+	<script type="text/javascript" src="js/jq164.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/magicline.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/iphone-style-checkboxes.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	
+	<!-- web version switcher -->
+	<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.on_off :checkbox').iphoneStyle();
+
+	    var onchange_checkbox = ($('.onchange :checkbox')).iphoneStyle({
+	      onChange: function(elem, value) { 
+	        $('span#status').html(value.toString());
+			
+/******************* ubaci mobile version URL! *****************************/
+			window.location.replace("http://google.com");
+	      }
+	    });
+	  });
+	</script>
+	
+	<!-- input fields -->
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+		    $("form.jqtransform").jqTransform();
+		});
+	</script>
+	
+	<!-- google analytics -->
+	
+</head><!-- end HEAD -->
+
+<body class="mkd">
+	
+	<div class="header_wrap">
+		<div class="header">
+			<div class="multiBar">
+				<ul class="login">
+					<li><a href="http://touch.unlimited-qr.com/profil/login/" id="login">Пријави се</a> &nbsp;&bull;&nbsp; </li>
+					<li><a href="http://touch.unlimited-qr.com/profil/register/" id="register">Регистрирај се</a> &nbsp;&bull;&nbsp; </li>
+					<!-- <li><a href="profil_mk.html"><b>Username</b></a> &nbsp;&bull;&nbsp; </li>
+					<li><a href="#">одјава</a> &nbsp;|&nbsp; </li> -->
+				</ul>
+				<ul class="multiLanguage">
+					<li>Избери јазик:</li>
+					<li><a href="index_en.html"><img src="images/icons/language/gb.png"></a></li>
+					<li><a href="index_hr.html"><img src="images/icons/language/hr.png"></a></li><!-- klasa se mjenja ovisno o odabranom jeziku -->
+					<li><a href="index_ba.html"><img src="images/icons/language/ba.png"></a></li>
+					<li><a href="index_si.html"><img src="images/icons/language/si.png"></a></li>
+					<li><a href="index_rs.html"><img src="images/icons/language/rs.png"></a></li>
+					<li><a href="#" class="currentLang"><img src="images/icons/language/mk.png"></a></li>
+					<li><a href="index_me.html"><img src="images/icons/language/me.png"></a></li>
+					<li><a href="index_al.html"><img src="images/icons/language/al.png"></a></li>
+				</ul>
+			</div><!-- /multiBar -->
+			<div class="search">
+				<input type="text" name="search" value="Пребарувај..." id="search" onclick="this.value='';" onfocus="this.select()" />
+			</div><!-- /search -->
+			<div class="clear"></div>
+		</div><!-- /header -->
+		<div class="menuBar">
+			<div class="logo">
+				<a href="#"><img src="images/logo.png" /></a>
+			</div><!-- /logo -->
+			<div class="menu">
+				<ul class="group" id="mainmenu">
+					<li class="current_page_item"><a href="#">ДОМА</a></li>
+					<li><a href="http://touch.unlimited-qr.com/mk/idemo_van/?&" id="idemo_van">ТОП НАСТАНИ!</a></li>
+					<li><a href="http://touch.unlimited-qr.com/mk/puls_generacije/?&">Прашање на денот</a></li>
+				</ul>
+			</div><!-- /menu -->
+		</div><!-- /menuBar -->
+	</div><!-- /header_wrap -->
+	
+	<!-- TOGGLE BAR -->
+
+		<div class="toggle">
+
+		</div><!-- /toggle -->
+		
+	<div class="main_wrap">
+		<div class="main_container">
+			<div class="main_box idemovan">
+				<div class="main_box_inner">
+					<img src="images/main_box1.jpg" />
+					<div class="box_title">
+						<h3>ТОП НАСТАНИ!</h3>
+					</div><!-- /box_title -->
+					<div class="box_desc">
+						<p>Дознај за интересни  настани во твојот град, а можеш да додадеш и некој свој настан!</p>
+					</div><!-- /box_desc -->
+				</div><!-- /main_box_inner -->
+				<div class="box_link">
+					<a href="http://touch.unlimited-qr.com/mk/idemo_van/?&">Пребарувај настани</a>
+				</div><!-- /box_link -->
+			</div><!-- /main_box -->
+			
+			<div class="main_box pulsgen">
+				<div class="main_box_inner">
+					<img src="images/main_box5.jpg" />
+					<div class="box_title">
+						<h3>Прашање на денот</h3>
+					</div><!-- /box_title -->
+					<div class="box_desc">
+						<p>Дознај што ги интересира твоите врсници, одговори им и постави им прашање!</p>
+					</div><!-- /box_desc -->
+				</div><!-- /main_box_inner -->
+				<div class="box_link">
+					<a href="http://touch.unlimited-qr.com/mk/puls_generacije/?&">Постави прашање</a>
+				</div><!-- /box_link -->
+			</div><!-- /main_box -->
+			
+			<div class="main_box qrcodegen no_mr">
+				<div class="main_box_inner">
+					<img src="images/main_boxQR.jpg" />
+					<div class="box_title box_title_qr">
+						<h3>Генератор на QR код</h3>
+					</div><!-- /box_title -->
+					<div class="box_desc">
+						<form action="#" method="post" accept-charset="utf-8" id="qr_form">
+							<fieldset>
+								<legend>Типот на содржина:</legend>
+								<p><input type="radio" name="qr_content" id="qr_content_url" checked="checked" value="qr_content_url"><label for="qr_content_url">УРЛ</label>
+									<input type="radio" name="qr_content" id="qr_content_text" value="qr_content_text"><label for="qr_content_text">Текст</label>
+									<input type="radio" name="qr_content" id="qr_content_phone" value="qr_content_phone"><label for="qr_content_phone">Телефон</label>
+									<input type="radio" name="qr_content" id="qr_content_sms" value="qr_content_sms"><label for="qr_content_sms">CMC</label>
+								</p>
+							</fieldset>
+							<fieldset>
+								<legend>Cодржина:</legend>
+								<p>
+									<span id="qr_input">
+										<input type="text" name="qr_input_url" value="http://" id="qr_input_url">
+										<span id="counter"><strong id="cc">250</strong></span><input type="hidden" id="counter_text_limit" name="counter_text_limit" value="250" />
+										<textarea name="qr_input_text" id="qr_input_text" rows="4" cols="40"></textarea>
+										<input type="text" name="qr_input_phone" value="+385 " id="qr_input_phone">
+                                        <!-- sms -->
+										<input type="text" name="qr_input_sms_nr" value="+385" id="qr_input_sms_nr">
+										<span id="counter_sms"><strong>160</strong></span><input type="hidden" id="counter_sms_limit" name="counter_sms_limit" value="160" />
+										<textarea name="qr_input_sms_msg" id="qr_input_sms_msg" rows="4" cols="40">Порака</textarea>
+										<div class="clear"></div>
+									</span>
+								</p>
+							</fieldset>
+							<div class="submit_field">
+								<select>
+									<option>Големина: S</option>
+									<option>Големина: M</option>
+									<option>Големина: L</option>
+									<option>Големина: XL</option>
+								</select>
+								<input type="submit" name="qr_submit" value="Генерирање QR" id="qr_submit">
+								
+							</div><!-- /submit_field -->
+						</form>
+						<div id="qrcode_holder">
+							<div id="qrcode"></div>
+							<a href="#" id="qr_back">Back</a>
+						</div><!-- /qrcode_holder -->
+
+					</div><!-- /box_desc -->
+				</div><!-- /main_box_inner -->
+			</div><!-- /main_box -->
+			
+			<div class="clear"></div>
+		</div><!-- /main_container -->
+		
+	</div><!-- /main_wrap -->
+	
+	<!-- FOOTER -->
+	<div class="footer">
+		<div class="footer_inner">
+			<div class="footerLMR">
+				<div class="footerL">
+					<ul>
+						<li class="top"><h6 class="footmenu">мени</h6></li>
+						<li><a href="#" class="foothome">ДОМА</a></li>
+						<li><a href="http://touch.unlimited-qr.com/mk/idemo_van/?&" class="footidemovan">ТОП НАСТАНИ!</a></li>
+						<li class="no_bg"><a href="http://touch.unlimited-qr.com/mk/puls_generacije/?&" class="footpuls">Прашање на денот</a></li>
+					</ul>
+				</div><!-- /footerL -->
+				<div class="footerM">
+					<ul>
+						<li class="top"><h6 class="footinfo">Поддршка за корисници</h6></li>
+						<li><a href="http://www.unlimited-qr-portal.com/HowTo.aspx?" class="footupute">Упатства за употреба</a></li>
+						<li><p class="footkontakt">Контакт</p></li>
+						<li class="no_bg"><p class="normal">Тел: +385 52 844 000</p></li>
+						<li class="no_bg"><p class="normal">Факс: +385 52 844 470</p></li>
+						<li><p class="footversion">верзија на страницата</p></li>
+						<li class="no_bg">
+							<ul class="onchange">
+								<li class="no_bg"><p class="normal">Нормално</p></li>
+								<li class="no_bg no_mr"><input type="checkbox" id="on_off" /></li>
+								<li class="no_bg"><p class="normal">мобилни</p></li>
+							</ul>
+						</li>
+					</ul>
+                    
+				</div><!-- footerM -->
+				<div class="footerR">
+					<ul>
+						<li class="top"><h6 class="footinfo">Поврзете се со нас</h6></li>
+						<li class="no_bg"><a href="http://www.facebook.com/TDR.Rovinj" class="fbicon" target="_blank">Facebook</a><a href="http://www.youtube.com/TvornicaDuhanaRovinj" class="yticon" target="_blank">Youtube</a></li>
+					</ul>
+				</div><!-- footerR -->
+
+				<div class="clear"></div>
+			</div><!-- /footerLMR -->
+
+			<div class="copy">
+				<p>&copy; Unlimited QR 2011.  &bull;  Сите права се задржани</p>
+			</div><!-- /copy -->
+		</div><!-- /footer_inner -->
+	</div><!-- /footer -->
+	
+</body><!-- end BODY -->
+
+</html>

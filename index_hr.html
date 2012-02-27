@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>UNLIMITED QR PORTAL</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	<!-- jQUERY -->
+	<script type="text/javascript" src="js/jq164.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/magicline.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/iphone-style-checkboxes.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	
+	<!-- web version switcher -->
+	<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.on_off :checkbox').iphoneStyle();
+
+	    var onchange_checkbox = ($('.onchange :checkbox')).iphoneStyle({
+	      onChange: function(elem, value) { 
+	        $('span#status').html(value.toString());
+			
+/******************* ubaci mobile version URL! *****************************/
+			window.location.replace("http://google.com");
+	      }
+	    });
+	  });
+	</script>
+	
+	<!-- input fields -->
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+		    $("form.jqtransform").jqTransform();
+		});
+	</script>
+	
+	<!-- google analytics -->
+	
+</head><!-- end HEAD -->
+
+<body>
+	
+	<div class="header_wrap">
+		<div class="header">
+			<div class="multiBar">
+				<ul class="login">
+					<li><a href="#" id="login">Login</a> &nbsp;&bull;&nbsp; </li><!-- non-registered -->
+					<li><a href="#" id="register">Registriraj se</a> &nbsp;&bull;&nbsp; </li><!-- non-registered -->
+					<!-- <li><a href="profil_hr.html"><b>Username</b></a> &nbsp;&bull;&nbsp; </li>
+					<li><a href="#">Odjavi se</a> &nbsp;|&nbsp; </li> -->
+				</ul>
+				<ul class="multiLanguage">
+					<li>Odaberite jezik:</li>
+					<li><a href="index_gb.html"><img src="images/icons/language/gb.png"></a></li>
+					<li><a href="#" class="currentLang"><img src="images/icons/language/hr.png"></a></li><!-- klasa se mjenja ovisno o odabranom jeziku -->
+					<li><a href="index_ba.html"><img src="images/icons/language/ba.png"></a></li>
+					<li><a href="index_si.html"><img src="images/icons/language/si.png"></a></li>
+					<li><a href="index_rs.html"><img src="images/icons/language/rs.png"></a></li>
+					<li><a href="index_mk.html"><img src="images/icons/language/mk.png"></a></li>
+					<li><a href="index_me.html"><img src="images/icons/language/me.png"></a></li>
+					<li><a href="index_al.html"><img src="images/icons/language/al.png"></a></li>
+				</ul>
+			</div><!-- /multiBar -->
+			<div class="search">
+				<input type="text" name="search" value="Upišite traženi pojam..." id="search" onclick="this.value='';" onfocus="this.select()" />
+			</div><!-- /search -->
+			<div class="clear"></div>
+		</div><!-- /header -->
+		<div class="menuBar">
+			<div class="logo">
+				<a href="index_hr.html"><img src="images/logo.png" /></a>
+			</div><!-- /logo -->
+			<div class="menu">
+				<ul class="group" id="mainmenu">
+					<li class="current_page_item"><a href="#">Naslovnica</a></li>
+					<li><a href="#" id="idemo_van">Galerija wallpapera</a></li>
+					<li><a href="#" id="poi">Ringtonovi</a></li>
+				</ul>
+			</div><!-- /menu -->
+		</div><!-- /menuBar -->
+	</div><!-- /header_wrap -->
+	
+<!-- TOGGLE BAR -->
+	
+	<div class="toggle">
+		<div class="toggle_inner">
+			<div id="togg_idemovan">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Pretraži događanja</p>
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<input type="text" name="idemovan_search" value="Upišite traženi pojam..." id="idemovan_search" onclick="this.value=''" onfocus="this.select()">
+						<select>
+						  <option value="">Odaberite grad</option>
+						  <option value="">Grad 1</option>
+						  <option value="">Grad 2</option>
+						  <option value="">Grad 3</option>
+						</select>
+						<select>
+						  <option value="">Kategorija događanja</option>
+						  <option value="">Kategorija 1</option>
+						  <option value="">Kategorija 2</option>
+						  <option value="">Kategorija 3</option>
+						</select>
+						<input type="submit" value="Pretraži događanja">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Dodaj svoje događanje</p>
+					<p>Super, baš nas zanima! Ali prije toga moraš otvoriti svoj profil - gotov si za minutu, a moći ćeš koristiti i sve druge zanimljive sadržaje na ovoj stranici!</p><!-- /non-registered -->
+					<a href="#" id="open_acc">Otvorite račun</a><!-- /non-registered -->
+					<div class="clear"></div>
+					<p>Bok! Saznaj kakva se sva zanimljiva događanja spremaju u tvom gradu, a ako želiš, možeš dodati i svoj događaj te pozvati ekipu!</p><!-- /registered -->
+					<a href="#" id="open_acc">Dodaj događanje</a><!-- /registered -->
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_idemovan -->
+			
+			<div id="togg_poi">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Pretraži točke interesa</p>
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<select>
+						  <option value="">Kategorija sadržaja</option>
+						  <option value="">Kategorija 1</option>
+						  <option value="">Kategorija 2</option>
+						  <option value="">Kategorija 3</option>
+						</select>
+						<select>
+						  <option value="">Odaberi grad za kategoriju</option>
+						  <option value="">Grad 1</option>
+						  <option value="">Grad 2</option>
+						  <option value="">Grad 3</option>
+						</select>
+						<input type="text" name="poi_address" value="Pretraži lokacije po adresi" id="poi_address">
+						<input type="submit" value="Pretraži točke">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Geolokacijsko pretraživanje</p>
+					<a href="#" id="togg_full">Prikaži najbliže lokacije za kategoriju <span>Hrana i piće</span></a>
+					<p class="disclaimer">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_poi -->
+			
+			<div id="togg_wifi">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Besplatne Wi-Fi Lokacije</p>
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<select>
+						  <option value="">Odaberi grad</option>
+						  <option value="">Grad 1</option>
+						  <option value="">Grad 2</option>
+						  <option value="">Grad 3</option>
+						</select>
+						<input type="text" name="wifi_address" value="Pretraži lokacije po adresi" id="wifi_address">
+						<input type="submit" value="Pretraži lokacije">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Geolokacijsko pretraživanje</p>
+					<p class="error_info">Došlo je do greške!</p><!-- /error_info -->
+					<p class="error_info">Vaš preglednik ne podržava geolokacijsku uslugu!</p><!-- http://www.browsergeolocation.com/ -->
+					<a href="#" id="togg_full">Prikaži najbliže lokacije</a>
+					<p class="disclaimer">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_wifi -->
+			
+			<div id="togg_smoke">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Gdje ima dima?</p>
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<input type="text" name="gdjeimadima_search" value="Upišite traženi pojam..." id="gdjeimadima_search" onclick="this.value='';" onfocus="this.select()">
+						<select>
+						  <option value="">Odaberi grad</option>
+						  <option value="">Grad 1</option>
+						  <option value="">Grad 2</option>
+						  <option value="">Grad 3</option>
+						</select>
+						<input type="submit" value="Pretraži lokacije">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Geolokacijsko pretraživanje</p>
+					<a href="#" id="togg_full">Prikaži najbliže lokacije</a>
+					<p class="disclaimer mb15">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
+					<p class="togg_title">Dodaj svoju lokaciju</p>
+					<p>Kako biste dodali lokaciju, morate kreirati korisnički račun.</p><!-- /non-registered -->
+					<a href="#" id="open_acc">Otvori račun</a><!-- /non-registered -->
+					<div class="clear"></div>
+					<p>Označi i dodaj lokaciju na kojoj je pušenje dopušteno.</p><!-- /registered -->
+					<a href="#" id="open_acc">Dodaj lokaciju</a><!-- /registered -->
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_smoke -->
+			
+			<div id="togg_login">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Profil - Login</p>
+					<p class="error_info">Pogrešno korisničko ime ili lozinka</p><!-- /error_info -->
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<input type="text" name="login_username" value="Korisničko ime" id="login_username" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="login_password" value="Lozinka" id="login_password" onclick="this.value='';" onfocus="this.select()">
+						<input type="submit" value="Login">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Pomoćne informacije</p>
+					<a href="#" class="forgottenpass" id="togg_forgot">Zaboravili ste svoju lozinku?</a>
+					<p>Nemaš korisnički račun? <a href="#" class="register" id="togg_reg">Registriraj se</a></p>
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_login -->
+			
+			<div id="togg_forgottenpass">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Povrat zaboravljene lozinke</p>
+					<p class="error_info">Ova e-mail adresa je pogrešna</p><!-- /error_info -->
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<input type="text" name="forgottenpass_email" value="E-mail adresa" id="forgottenpass_email" onclick="this.value='';" onfocus="this.select()">
+						<input type="submit" value="Povrati lozinku">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Pomoćne informacije</p>
+					<p>Upišite e-mail adresu koju ste koristili kod registracije.</p>
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_forgottenpass -->
+			
+			<div id="togg_register">
+				<div class="togg_leftE">
+					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
+				</div><!-- /togg_leftE -->
+				<div class="togg_left">
+					<p class="togg_title">Registriraj se</p>
+					<p class="error_info">Niste unijeli korisničko ime</p><!-- /error_info -->
+					<p class="error_info">Niste unijeli ime</p><!-- /error_info -->
+					<p class="error_info">Niste unijeli prezime</p><!-- /error_info -->
+					<p class="error_info">Niste unijeli e-mail adresu</p><!-- /error_info -->
+					<p class="error_info">Niste unijeli lozinku</p><!-- /error_info -->
+					<p class="error_info">Niste unijeli ponovljenu lozinku</p><!-- /error_info -->
+					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
+						<input type="text" name="reg_username" value="Korisničko ime" id="reg_username" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="reg_name" value="Ime" id="reg_name" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="reg_surname" value="Prezime" id="reg_surname" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="reg_email" value="E-mail adresa" id="reg_email" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="reg_pass" value="Lozinka" id="reg_pass" onclick="this.value='';" onfocus="this.select()">
+						<input type="text" name="reg_pass_again" value="Ponovljena lozinka" id="reg_pass_again" onclick="this.value='';" onfocus="this.select()">
+						<input type="checkbox" name="reg_qr_baza" value="" id="reg_qr_baza" checked="checked"><label for="reg_qr_baza">Da, želim se prijaviti u bazu korisnika QR koda</label>
+						
+						<input type="submit" value="Kreiraj moj račun">
+						<div class="clear"></div>
+					</form>
+				</div><!-- /togg_left -->
+				<div class="togg_right">
+					<p class="togg_title">Pomoćne informacije</p>
+					<p>Ako imaš korisnički račun — <a href="#" class="register" id="togg_login_btn">prijavi se!</a></p>
+					<div class="clear"></div>
+				</div><!-- /togg_right -->
+				<div class="clear"></div>
+			</div><!-- /togg_register -->
+		</div><!-- /toggle_inner -->
+
+	</div><!-- /toggle -->
+		
+<!-- MAIN BODY -->
+		
+	<div class="main_wrap">
+		<div class="main_container">
+
+		</div><!-- /main_container -->	
+	</div><!-- /main_wrap -->
+	
+<!-- FOOTER -->
+
+	<div class="footer">
+		<div class="footer_inner">
+			<div class="footerLMR">
+				<div class="footerL">
+					<ul>
+						<li class="top"><h6 class="footmenu">Menu</h6></li>
+						<li><a href="#" class="foothome">Naslovnica</a></li>
+						<li><a href="#" class="footidemovan">Galerija wallpapera</a></li>
+						<li class="no_bg"><a href="#" class="footpuls">Ringtonovi</a></li>
+					</ul>
+				</div><!-- /footerL -->
+				<div class="footerM">
+					<ul>
+						<li class="top"><h6 class="footinfo">Korisnička podrška</h6></li>
+						<li><a href="http://www.unlimited-qr-portal.com/HowTo.aspx?" class="footupute">Upute za korištenje</a></li>
+						<li><p class="footkontakt">Kontakt</p></li>
+						<li class="no_bg"><p class="normal">tel: +385 52 844 000</p></li>
+						<li class="no_bg"><p class="normal">fax: +385 52 844 470</p></li>
+						<li><p class="footversion">Verzija stranice</p></li>
+						<li class="no_bg">
+							<ul class="onchange">
+								<li class="no_bg"><p class="normal">Normal</p></li>
+								<li class="no_bg no_mr"><input type="checkbox" id="on_off" /></li>
+								<li class="no_bg"><p class="normal">Mobile</p></li>
+							</ul>
+						</li>
+					</ul>
+                    
+				</div><!-- footerM -->
+				<div class="footerR">
+					<ul>
+						<li class="top"><h6 class="footinfo">Povežite se s nama</h6></li>
+						<li class="no_bg"><a href="http://www.facebook.com/TDR.Rovinj" class="fbicon" target="_blank">Facebook</a><a href="http://www.youtube.com/TvornicaDuhanaRovinj" class="yticon" target="_blank">Youtube</a></li>
+					</ul>
+				</div><!-- footerR -->
+
+				<div class="clear"></div>
+			</div><!-- /footerLMR -->
+
+			<div class="copy">
+				<p>&copy; Unlimited QR 2011.  &bull;  Sva prava pridržana</p>
+			</div><!-- /copy -->
+		</div><!-- /footer_inner -->
+	</div><!-- /footer -->
+	
+</body><!-- end BODY -->
+
+</html>
