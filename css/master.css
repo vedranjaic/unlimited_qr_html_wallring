@@ -282,6 +282,8 @@ input#submit_answer:hover {cursor:pointer;}
 .footer a.footgdjeimadima {background:url(../images/icons/footgdjeimadima.png) top left no-repeat;}
 .footer a.footpuls {background:url(../images/icons/footpuls.png) top left no-repeat;}
 .footer a.footupute {background:url(../images/icons/footupute.png) top left no-repeat;}
+.footer a.footgallery {background:url(../images/icons/footgallery.png) top left no-repeat;}
+.footer a.footring {background:url(../images/icons/footringtone.png) top left no-repeat;}
 .footer p.footkontakt {background:url(../images/icons/footkontakt.png) top left no-repeat;}
 .footer p.footversion {background:url(../images/icons/footversion.png) top left no-repeat;}
 
@@ -315,18 +317,56 @@ label.iOSCheckLabelOff span {padding-right: 8px;}
 .iOSCheckHandleRight {height: 100%; width: 100%; padding-right: 3px; background: url('../images/ios-style-checkboxes/slider_right.png?1284697268') no-repeat right 0;}
 .iOSCheckHandleCenter {height: 100%; width: 100%; background: url('../images/ios-style-checkboxes/slider_center.png?1284697268');}
 
+/* ===[ WALLPAPER / RiNGTONES ]
+///////////////////////////////////////////////////////////////////*/
 
-
-
-
-
-/***/
-
-.toggle_inner, #togg_idemovan, #togg_poi, #togg_wifi, #togg_smoke, #togg_login, #togg_forgottenpass, #togg_register
-{
-	display:none;
+h5 {color:#fff; font-size:1.4em; font-weight:bold; margin-bottom:6px;}
+@font-face {
+    font-family: 'SilkscreenNormal';
+    src: url('../silkscreen/slkscr-webfont.eot');
+    src: url('../silkscreen/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../silkscreen/slkscr-webfont.woff') format('woff'),
+         url('../silkscreen/slkscr-webfont.ttf') format('truetype'),
+         url('../silkscreen/slkscr-webfont.svg#SilkscreenNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+#wallindexTop {position:relative; width:940px; height:375px; margin-bottom:30px;}
+/* wallpaper */
+.wallindexTopL {float:left;}
+.wallindexTopR {position:absolute; right:0; top:0; width:300px;}
+.stickerNew {position:relative; top:-2px; left:-2px;}
+.wallcopy {position:relative; width:300px; text-align:right; top:-62px; right:-280px;}
+.wallcopy h2 {margin-bottom:20px;}
+.wallcopy p {color:#fff; font-size:1.2em; line-height:1.4em; margin-bottom:20px;}
+.wallcopy a.wallDL {background:url(../images/wallring/buttons/btn_download_green.png) top left no-repeat; width:244px; height:69px; display:block; text-indent:-9999em; overflow:hidden; float:right;}
+.wallcopy a.wallDL:hover {background-position:bottom left;}
+.wallpaper {position:absolute; top:0; left:0; z-index:0;}
+/* ringtone */
+.ringtone {height:90px; margin-bottom:5px;}
+.ringtoneL {float:left; margin-right:10px;}
+.ringtone p {font-size:1.1em;}
+.ringtone p span {font-weight:bold;}
+.ringtoneRstats {font-family:'SilkscreenNormal', Helvetica, sans-serif; font-size:8px; color:#fff; margin-top:5px;}
+.ringtoneRstats ul li {float:left; margin-right:5px;}
+.ringtoneRstats ul li span {padding-left:21px; line-height:1.5em;}
+.ringtoneRstats ul li.plays {background:url(../images/wallring/player_sprite.png) -255px 0 no-repeat; width:55px; height:11px;}
+.ringtoneRstats ul li.downloads {background:url(../images/wallring/player_sprite.png) -255px -11px no-repeat; width:55px; height:11px;}
+.ringtoneRstats ul li.likes {background:url(../images/wallring/player_sprite.png) -255px -22px no-repeat; width:55px; height:11px;}
+/* wall archive */
+.wallArchiveTitle {border-bottom:1px solid #dedede; margin-bottom:25px;}
+.wallArchiveTitle h1 {float:left;}
+.wallArchiveTitle ul {float:right; width:200px; margin-top:20px;}
+.wallArchiveTitle ul li {float:left; margin-left:10px; height:10px;}
+.wallArchiveTitle ul li a {color:#031e33; font-size:1.1em; text-decoration:none;}
+li.gallery a {background:url(../images/wallring/buttons/btn_gallery_coverflow.png) 0 0 no-repeat; padding-left:20px;}
+li.coverflow a {background:url(../images/wallring/buttons/btn_gallery_coverflow.png) 0 -30px no-repeat; padding-left:20px;}
+.wallArchiveGalleryImg {float:left; margin-right:20px;}
+.wallArchiveGalleryImg img {display:block;}
+.wallArchiveGalleryImgInfo {background-color:#031e33; padding:5px 10px; width:200px;}
+.wallArchiveGalleryImgInfo a {float:left; background:url(../images/wallring/buttons/btn_preview.png) top left no-repeat; padding-left:18px; color:#fff; font-size:1.2em; height:14px; line-height:1.4em;}
+.wallArchiveGalleryImgInfo p {float:right; color:#fff; font-size:1.2em;}
 
 
 
@@ -370,5 +410,9 @@ label.iOSCheckLabelOff span {padding-right: 8px;}
 
 
 
+/* .toggle_inner, #togg_idemovan, #togg_poi, #togg_wifi, #togg_smoke, #togg_login, #togg_forgottenpass, #togg_register
+{
+	display:none;
+} */
 
 

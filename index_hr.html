@@ -14,13 +14,14 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/jplayer.blue.monday.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
 	<!-- jQUERY -->
 	<script type="text/javascript" src="js/jq164.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/magicline.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/iphone-style-checkboxes.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
-    
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
 	
@@ -47,6 +48,22 @@
 		});
 	</script>
 	
+	<!-- jplayer -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#jquery_jplayer_1").jPlayer({
+			ready: function () {
+				$(this).jPlayer("setMedia", {
+					mp3: "media/selinas_kpm_549_1400.mp3",
+					poster: "media/poster-selinas.jpg"
+				});
+			},
+			swfPath: "js",
+			supplied: "mp3"
+		});
+	});
+	</script>
+	
 	<!-- google analytics -->
 	
 </head><!-- end HEAD -->
@@ -57,9 +74,9 @@
 		<div class="header">
 			<div class="multiBar">
 				<ul class="login">
-					<li><a href="#" id="login">Login</a> &nbsp;&bull;&nbsp; </li><!-- non-registered -->
-					<li><a href="#" id="register">Registriraj se</a> &nbsp;&bull;&nbsp; </li><!-- non-registered -->
-					<!-- <li><a href="profil_hr.html"><b>Username</b></a> &nbsp;&bull;&nbsp; </li>
+					<!-- <li><a href="#" id="login">Login</a> &nbsp;&bull;&nbsp; </li>
+					<li><a href="#" id="register">Registriraj se</a> &nbsp;&bull;&nbsp; </li>
+					<li><a href="profil_hr.html"><b>Username</b></a> &nbsp;&bull;&nbsp; </li>
 					<li><a href="#">Odjavi se</a> &nbsp;|&nbsp; </li> -->
 				</ul>
 				<ul class="multiLanguage">
@@ -97,213 +114,44 @@
 	
 	<div class="toggle">
 		<div class="toggle_inner">
-			<div id="togg_idemovan">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Pretraži događanja</p>
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<input type="text" name="idemovan_search" value="Upišite traženi pojam..." id="idemovan_search" onclick="this.value=''" onfocus="this.select()">
-						<select>
-						  <option value="">Odaberite grad</option>
-						  <option value="">Grad 1</option>
-						  <option value="">Grad 2</option>
-						  <option value="">Grad 3</option>
-						</select>
-						<select>
-						  <option value="">Kategorija događanja</option>
-						  <option value="">Kategorija 1</option>
-						  <option value="">Kategorija 2</option>
-						  <option value="">Kategorija 3</option>
-						</select>
-						<input type="submit" value="Pretraži događanja">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Dodaj svoje događanje</p>
-					<p>Super, baš nas zanima! Ali prije toga moraš otvoriti svoj profil - gotov si za minutu, a moći ćeš koristiti i sve druge zanimljive sadržaje na ovoj stranici!</p><!-- /non-registered -->
-					<a href="#" id="open_acc">Otvorite račun</a><!-- /non-registered -->
-					<div class="clear"></div>
-					<p>Bok! Saznaj kakva se sva zanimljiva događanja spremaju u tvom gradu, a ako želiš, možeš dodati i svoj događaj te pozvati ekipu!</p><!-- /registered -->
-					<a href="#" id="open_acc">Dodaj događanje</a><!-- /registered -->
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_idemovan -->
-			
-			<div id="togg_poi">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Pretraži točke interesa</p>
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<select>
-						  <option value="">Kategorija sadržaja</option>
-						  <option value="">Kategorija 1</option>
-						  <option value="">Kategorija 2</option>
-						  <option value="">Kategorija 3</option>
-						</select>
-						<select>
-						  <option value="">Odaberi grad za kategoriju</option>
-						  <option value="">Grad 1</option>
-						  <option value="">Grad 2</option>
-						  <option value="">Grad 3</option>
-						</select>
-						<input type="text" name="poi_address" value="Pretraži lokacije po adresi" id="poi_address">
-						<input type="submit" value="Pretraži točke">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Geolokacijsko pretraživanje</p>
-					<a href="#" id="togg_full">Prikaži najbliže lokacije za kategoriju <span>Hrana i piće</span></a>
-					<p class="disclaimer">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_poi -->
-			
-			<div id="togg_wifi">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Besplatne Wi-Fi Lokacije</p>
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<select>
-						  <option value="">Odaberi grad</option>
-						  <option value="">Grad 1</option>
-						  <option value="">Grad 2</option>
-						  <option value="">Grad 3</option>
-						</select>
-						<input type="text" name="wifi_address" value="Pretraži lokacije po adresi" id="wifi_address">
-						<input type="submit" value="Pretraži lokacije">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Geolokacijsko pretraživanje</p>
-					<p class="error_info">Došlo je do greške!</p><!-- /error_info -->
-					<p class="error_info">Vaš preglednik ne podržava geolokacijsku uslugu!</p><!-- http://www.browsergeolocation.com/ -->
-					<a href="#" id="togg_full">Prikaži najbliže lokacije</a>
-					<p class="disclaimer">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_wifi -->
-			
-			<div id="togg_smoke">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Gdje ima dima?</p>
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<input type="text" name="gdjeimadima_search" value="Upišite traženi pojam..." id="gdjeimadima_search" onclick="this.value='';" onfocus="this.select()">
-						<select>
-						  <option value="">Odaberi grad</option>
-						  <option value="">Grad 1</option>
-						  <option value="">Grad 2</option>
-						  <option value="">Grad 3</option>
-						</select>
-						<input type="submit" value="Pretraži lokacije">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Geolokacijsko pretraživanje</p>
-					<a href="#" id="togg_full">Prikaži najbliže lokacije</a>
-					<p class="disclaimer mb15">* Kako bi vam prikazali najbliže tražene lokacije, morate dopustiti zadanom pregledniku da koristi podatke o lokaciji na kojoj se trenutno nalazite.</p>
-					<p class="togg_title">Dodaj svoju lokaciju</p>
-					<p>Kako biste dodali lokaciju, morate kreirati korisnički račun.</p><!-- /non-registered -->
-					<a href="#" id="open_acc">Otvori račun</a><!-- /non-registered -->
-					<div class="clear"></div>
-					<p>Označi i dodaj lokaciju na kojoj je pušenje dopušteno.</p><!-- /registered -->
-					<a href="#" id="open_acc">Dodaj lokaciju</a><!-- /registered -->
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_smoke -->
-			
-			<div id="togg_login">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Profil - Login</p>
-					<p class="error_info">Pogrešno korisničko ime ili lozinka</p><!-- /error_info -->
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<input type="text" name="login_username" value="Korisničko ime" id="login_username" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="login_password" value="Lozinka" id="login_password" onclick="this.value='';" onfocus="this.select()">
-						<input type="submit" value="Login">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Pomoćne informacije</p>
-					<a href="#" class="forgottenpass" id="togg_forgot">Zaboravili ste svoju lozinku?</a>
-					<p>Nemaš korisnički račun? <a href="#" class="register" id="togg_reg">Registriraj se</a></p>
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_login -->
-			
-			<div id="togg_forgottenpass">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Povrat zaboravljene lozinke</p>
-					<p class="error_info">Ova e-mail adresa je pogrešna</p><!-- /error_info -->
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<input type="text" name="forgottenpass_email" value="E-mail adresa" id="forgottenpass_email" onclick="this.value='';" onfocus="this.select()">
-						<input type="submit" value="Povrati lozinku">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Pomoćne informacije</p>
-					<p>Upišite e-mail adresu koju ste koristili kod registracije.</p>
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_forgottenpass -->
-			
-			<div id="togg_register">
-				<div class="togg_leftE">
-					<a href="#" id="close_togg"><span>&times; </span>Zatvori</a>
-				</div><!-- /togg_leftE -->
-				<div class="togg_left">
-					<p class="togg_title">Registriraj se</p>
-					<p class="error_info">Niste unijeli korisničko ime</p><!-- /error_info -->
-					<p class="error_info">Niste unijeli ime</p><!-- /error_info -->
-					<p class="error_info">Niste unijeli prezime</p><!-- /error_info -->
-					<p class="error_info">Niste unijeli e-mail adresu</p><!-- /error_info -->
-					<p class="error_info">Niste unijeli lozinku</p><!-- /error_info -->
-					<p class="error_info">Niste unijeli ponovljenu lozinku</p><!-- /error_info -->
-					<form action="#" method="post" accept-charset="utf-8" class="jqtransform_fix">
-						<input type="text" name="reg_username" value="Korisničko ime" id="reg_username" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="reg_name" value="Ime" id="reg_name" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="reg_surname" value="Prezime" id="reg_surname" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="reg_email" value="E-mail adresa" id="reg_email" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="reg_pass" value="Lozinka" id="reg_pass" onclick="this.value='';" onfocus="this.select()">
-						<input type="text" name="reg_pass_again" value="Ponovljena lozinka" id="reg_pass_again" onclick="this.value='';" onfocus="this.select()">
-						<input type="checkbox" name="reg_qr_baza" value="" id="reg_qr_baza" checked="checked"><label for="reg_qr_baza">Da, želim se prijaviti u bazu korisnika QR koda</label>
-						
-						<input type="submit" value="Kreiraj moj račun">
-						<div class="clear"></div>
-					</form>
-				</div><!-- /togg_left -->
-				<div class="togg_right">
-					<p class="togg_title">Pomoćne informacije</p>
-					<p>Ako imaš korisnički račun — <a href="#" class="register" id="togg_login_btn">prijavi se!</a></p>
-					<div class="clear"></div>
-				</div><!-- /togg_right -->
-				<div class="clear"></div>
-			</div><!-- /togg_register -->
+			<div id="jquery_jplayer_1"></div>
+			<div id="jp_container_1" class="jp-audio">
+		    <div class="jp-type-single">
+				<div class="jp-gui jp-interface">
+					<div class="jp-interfaceTop">
+						<ul class="jp-controls">
+							<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+							<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+							<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+						</ul>
+						<div class="jp-time-holder">
+							<div class="jp-current-time"></div>
+							<div class="jp-duration"></div>
+						</div>
+					</div><!-- /.jp-interfaceTop -->
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="jp_player_poster">
+					<img src="media/poster-selinas.jpg" />
+					<div class="jp-title">
+						<h5>Lorem ipsum dolor sit amet</h5>
+						<p>Lorem ipsum dolor sit amet</p>
+						<p><span>Album: </span>Lorem ipsum</p>
+					</div>
+				</div><!-- /.jp_player_poster -->
+				<div class="jp-button">
+					<a href="#" class="like">Like</a><a href="#" class="dl">Download</a>
+				</div><!-- /.jp-button -->
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
 		</div><!-- /toggle_inner -->
 
 	</div><!-- /toggle -->
@@ -312,8 +160,155 @@
 		
 	<div class="main_wrap">
 		<div class="main_container">
-
-		</div><!-- /main_container -->	
+			<div id="wallindexTop">
+				<div class="wallindexTopL">
+					<div class="wallpaper">
+						<img src="images/wallring/wallpaper_620x375.jpg" />
+					</div><!-- /.wallpaper -->
+					<div class="stickerNew">
+						<img src="images/wallring/sticker_new.png" />
+					</div><!-- /.stickerNew -->
+					<div class="wallcopy">
+						<h2>Lorem ipsum dolor sit amet consecutor</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<a href="#" class="wallDL"></a><!-- /.wallDL -->
+					</div><!-- /.wallcopy -->
+				</div><!-- /.wallindexTopL -->
+				<div class="wallindexTopR">
+					<!-- 1 -->
+					<div class="ringtone">
+						<div class="ringtoneL">
+							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+						</div><!-- /.ringtoneL -->
+						<div class="ringtoneR">
+							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
+							<p>Nina badrić</p>
+							<p><span>Album: </span>Nebo</p>
+							<div class="ringtoneRstats">
+								<ul>
+									<li class="plays"><span>12345</span></li>
+									<li class="downloads"><span>1234</span></li>
+									<li class="likes"><span>123</span></li>
+									<div class="clear"></div><!-- /.clear -->
+								</ul>
+							</div><!-- /.ringtoneRstats -->
+						</div><!-- /.ringtoneR -->
+					</div><!-- /.ringtone -->
+					
+					<!-- 2 -->
+					<div class="ringtone">
+						<div class="ringtoneL">
+							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+						</div><!-- /.ringtoneL -->
+						<div class="ringtoneR">
+							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
+							<p>Nina badrić</p>
+							<p><span>Album: </span>Nebo</p>
+							<div class="ringtoneRstats">
+								<ul>
+									<li class="plays"><span>12345</span></li>
+									<li class="downloads"><span>1234</span></li>
+									<li class="likes"><span>123</span></li>
+									<div class="clear"></div><!-- /.clear -->
+								</ul>
+							</div><!-- /.ringtoneRstats -->
+						</div><!-- /.ringtoneR -->
+					</div><!-- /.ringtone -->
+					
+					<!-- 3 -->
+					<div class="ringtone">
+						<div class="ringtoneL">
+							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+						</div><!-- /.ringtoneL -->
+						<div class="ringtoneR">
+							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
+							<p>Nina badrić</p>
+							<p><span>Album: </span>Nebo</p>
+							<div class="ringtoneRstats">
+								<ul>
+									<li class="plays"><span>12345</span></li>
+									<li class="downloads"><span>1234</span></li>
+									<li class="likes"><span>123</span></li>
+									<div class="clear"></div><!-- /.clear -->
+								</ul>
+							</div><!-- /.ringtoneRstats -->
+						</div><!-- /.ringtoneR -->
+					</div><!-- /.ringtone -->
+					
+					<!-- 4 -->
+					<div class="ringtone">
+						<div class="ringtoneL">
+							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+						</div><!-- /.ringtoneL -->
+						<div class="ringtoneR">
+							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
+							<p>Nina badrić</p>
+							<p><span>Album: </span>Nebo</p>
+							<div class="ringtoneRstats">
+								<ul>
+									<li class="plays"><span>12345</span></li>
+									<li class="downloads"><span>1234</span></li>
+									<li class="likes"><span>123</span></li>
+									<div class="clear"></div><!-- /.clear -->
+								</ul>
+							</div><!-- /.ringtoneRstats -->
+						</div><!-- /.ringtoneR -->
+					</div><!-- /.ringtone -->
+					
+				</div><!-- /.wallindexTopR -->
+				<div class="clear"></div><!-- /.clear -->
+			</div><!-- /wallindexTop -->
+			
+			<div class="wallArchive">
+				<div class="wallArchiveTitle">
+					<h1>Arhiva wallpapera:</h1>
+					<ul>
+						<li class="gallery"><a href="#">Galerija</a></li>
+						<li class="coverflow"><a href="#">Brzi pregled</a></li>
+					</ul>
+					<div class="clear"></div><!-- /.clear -->
+				</div><!-- /.wallArchiveTitle -->
+				<div class="wallArchiveGallery">
+					<div class="wallArchiveGalleryImg">
+						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="#">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<div class="wallArchiveGalleryImg">
+						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="#">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<div class="wallArchiveGalleryImg">
+						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="#">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<div class="wallArchiveGalleryImg no_mr">
+						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="#">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<div class="clear"></div><!-- /.clear -->
+				</div><!-- /.wallArchiveGallery -->
+			</div><!-- /.wallArchive -->
+		</div><!-- /main_container -->
 	</div><!-- /main_wrap -->
 	
 <!-- FOOTER -->
@@ -325,8 +320,8 @@
 					<ul>
 						<li class="top"><h6 class="footmenu">Menu</h6></li>
 						<li><a href="#" class="foothome">Naslovnica</a></li>
-						<li><a href="#" class="footidemovan">Galerija wallpapera</a></li>
-						<li class="no_bg"><a href="#" class="footpuls">Ringtonovi</a></li>
+						<li><a href="#" class="footgallery">Galerija wallpapera</a></li>
+						<li class="no_bg"><a href="#" class="footring">Ringtonovi</a></li>
 					</ul>
 				</div><!-- /footerL -->
 				<div class="footerM">
