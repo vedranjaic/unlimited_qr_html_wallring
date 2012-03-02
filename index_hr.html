@@ -12,9 +12,10 @@
 	<![endif]-->
 	
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/jplayer.blue.monday.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/jqtransform.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/jplayer.blue.monday.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
 	
 	<!-- jQUERY -->
 	<script type="text/javascript" src="js/jq164.js" charset="utf-8"></script>
@@ -22,8 +23,7 @@
 	<script type="text/javascript" src="js/iphone-style-checkboxes.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
     <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 	
 	<!-- web version switcher -->
 	<script type="text/javascript" charset="utf-8">
@@ -55,11 +55,14 @@
 			ready: function () {
 				$(this).jPlayer("setMedia", {
 					mp3: "media/selinas_kpm_549_1400.mp3",
-					poster: "media/poster-selinas.jpg"
+					ogg: "media/selinas_kpm_549_1400.ogg",
+					m4a: "media/selinas_kpm_549_1400.m4a",
+					poster: "media/jeevan-anandasivam_50x50.jpg"
 				});
 			},
 			swfPath: "js",
-			supplied: "mp3"
+			supplied: "mp3, ogg, m4a",
+			wmode: "window"
 		});
 	});
 	</script>
@@ -113,7 +116,7 @@
 <!-- TOGGLE BAR -->
 	
 	<div class="toggle">
-		<div class="toggle_inner">
+		<div class="toggle_inner" id="toggle_flag">
 			<div id="jquery_jplayer_1"></div>
 			<div id="jp_container_1" class="jp-audio">
 		    <div class="jp-type-single">
@@ -136,15 +139,17 @@
 					</div>
 				</div>
 				<div class="jp_player_poster">
-					<img src="media/poster-selinas.jpg" />
-					<div class="jp-title">
-						<h5>Lorem ipsum dolor sit amet</h5>
-						<p>Lorem ipsum dolor sit amet</p>
-						<p><span>Album: </span>Lorem ipsum</p>
+                	<div id="poster_container">
+						<img src="media/jeevan-anandasivam_50x50.jpg" />
+					</div>
+                    <div class="jp-title">
+						<h5 id="songtitle">Selinas</h5>
+						<p id="artist">Jeevan Anandasivam</p>
+						<p id="album"><span>Album: </span>KPM 549</p>
 					</div>
 				</div><!-- /.jp_player_poster -->
 				<div class="jp-button">
-					<a href="#" class="like">Like</a><a href="#" class="dl">Download</a>
+					<a href="#" class="dl">Download</a>
 				</div><!-- /.jp-button -->
 				<div class="jp-no-solution">
 					<span>Update Required</span>
@@ -163,98 +168,69 @@
 			<div id="wallindexTop">
 				<div class="wallindexTopL">
 					<div class="wallpaper">
-						<img src="images/wallring/wallpaper_620x375.jpg" />
+						<img src="images/wallring/wallpaper/01_201203_palma_620x375.jpg" />
 					</div><!-- /.wallpaper -->
 					<div class="stickerNew">
 						<img src="images/wallring/sticker_new.png" />
 					</div><!-- /.stickerNew -->
-					<div class="wallcopy">
-						<h2>Lorem ipsum dolor sit amet consecutor</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="#" class="wallDL"></a><!-- /.wallDL -->
+					<div class="wallcopy wallcopyBL wcBLUE">
+						<h2>Besplatno preuzmite wallpaper</h2>
+						<p>Svaki mjesec očekuju vas nove pozadine koje možete postaviti na svoje računalo</p>
+						<a href="wallpapers/01_palma_full.jpg" rel="prettyPhoto" class="wallDL" title="Za preuzimanje slike desnim klikom odaberite Save image as..."></a><!-- /.wallDL -->
 					</div><!-- /.wallcopy -->
 				</div><!-- /.wallindexTopL -->
 				<div class="wallindexTopR">
+					
 					<!-- 1 -->
 					<div class="ringtone">
 						<div class="ringtoneL">
-							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+							<a href="#" class="play" rel="media/selinas_kpm_549_1400"><img src="media/jeevan-anandasivam_90x90.jpg" /></a>
+                            <input type="hidden" value="media/jeevan-anandasivam_50x50.jpg" />
+							<input type="hidden" value="Selinas" />
+							<input type="hidden" value="Jeevan Anandasivam" />
+							<input type="hidden" value="<span>Album: </span>KPM 549" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
-							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
-							<p>Nina badrić</p>
-							<p><span>Album: </span>Nebo</p>
-							<div class="ringtoneRstats">
-								<ul>
-									<li class="plays"><span>12345</span></li>
-									<li class="downloads"><span>1234</span></li>
-									<li class="likes"><span>123</span></li>
-									<div class="clear"></div><!-- /.clear -->
-								</ul>
-							</div><!-- /.ringtoneRstats -->
+							<h4 class="ringtoneRsong">Selinas</h4>
+							<p>Jeevan Anandasivam</p>
+							<p><span>Album: </span>KPM 549</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
 					<!-- 2 -->
 					<div class="ringtone">
 						<div class="ringtoneL">
-							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+							<a href="#" class="play" rel="media/chapav_185_3_funk_fever_salkeld_63122"><img src="media/adam-salkeld_90x90.jpg" /></a>
+                            <input type="hidden" value="media/adam-salkeld_50x50.jpg" />
+							<input type="hidden" value="Funk Fever" />
+							<input type="hidden" value="Adam Salkeld" />
+							<input type="hidden" value="<span>Album: </span>Essential House" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
-							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
-							<p>Nina badrić</p>
-							<p><span>Album: </span>Nebo</p>
-							<div class="ringtoneRstats">
-								<ul>
-									<li class="plays"><span>12345</span></li>
-									<li class="downloads"><span>1234</span></li>
-									<li class="likes"><span>123</span></li>
-									<div class="clear"></div><!-- /.clear -->
-								</ul>
-							</div><!-- /.ringtoneRstats -->
+							<h4 class="ringtoneRsong">Funk Fever</h4>
+							<p>Adam Salkeld</p>
+							<p><span>Album: </span>Essential House</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
 					<!-- 3 -->
 					<div class="ringtone">
 						<div class="ringtoneL">
-							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
+							<a href="#" class="play" rel="media/atv_5a_53_paradise_luv_taylor_251910"><img src="media/andy-taylor_90x90.jpg" /></a>
+                            <input type="hidden" value="media/andy-taylor_50x50.jpg" />
+							<input type="hidden" value="Paradise Luv" />
+							<input type="hidden" value="Andy Taylor" />
+							<input type="hidden" value="<span>Album: </span>ATV5 Sex" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
-							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
-							<p>Nina badrić</p>
-							<p><span>Album: </span>Nebo</p>
-							<div class="ringtoneRstats">
-								<ul>
-									<li class="plays"><span>12345</span></li>
-									<li class="downloads"><span>1234</span></li>
-									<li class="likes"><span>123</span></li>
-									<div class="clear"></div><!-- /.clear -->
-								</ul>
-							</div><!-- /.ringtoneRstats -->
+							<h4 class="ringtoneRsong">Paradise Luv</h4>
+							<p>Andy Taylor</p>
+							<p><span>Album: </span>ATV5 Sex</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
 					<!-- 4 -->
-					<div class="ringtone">
-						<div class="ringtoneL">
-							<a href="#" class="play"><img src="images/wallring/ringtone_img_90x90.jpg" /></a>
-						</div><!-- /.ringtoneL -->
-						<div class="ringtoneR">
-							<h4 class="ringtoneRsong">Lorem ipsum dolor sit ametipsum dolor sit amet</h4>
-							<p>Nina badrić</p>
-							<p><span>Album: </span>Nebo</p>
-							<div class="ringtoneRstats">
-								<ul>
-									<li class="plays"><span>12345</span></li>
-									<li class="downloads"><span>1234</span></li>
-									<li class="likes"><span>123</span></li>
-									<div class="clear"></div><!-- /.clear -->
-								</ul>
-							</div><!-- /.ringtoneRstats -->
-						</div><!-- /.ringtoneR -->
-					</div><!-- /.ringtone -->
-					
+
 				</div><!-- /.wallindexTopR -->
 				<div class="clear"></div><!-- /.clear -->
 			</div><!-- /wallindexTop -->
@@ -264,42 +240,86 @@
 					<h1>Arhiva wallpapera:</h1>
 					<ul>
 						<li class="gallery"><a href="#">Galerija</a></li>
-						<li class="coverflow"><a href="#">Brzi pregled</a></li>
+						<li class="coverflow"><a href="wallpapers/01_palma_full.jpg" rel="prettyPhoto[gallery]">Brzi pregled</a></li>
 					</ul>
 					<div class="clear"></div><!-- /.clear -->
 				</div><!-- /.wallArchiveTitle -->
 				<div class="wallArchiveGallery">
+					<!-- 1 -->
 					<div class="wallArchiveGalleryImg">
-						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<a href="wallpapers/02_pijesak_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/02_201203_pijesak_220x133.jpg" alt="Pijesak 1920x1200"/></a>
 						<div class="wallArchiveGalleryImgInfo">
-							<a href="#">Pogled</a>
+							<a href="wallpapers/02_pijesak_full.jpg" rel="prettyPhoto">Pogled</a>
 							<p>ožujak 2012.</p>
 							<div class="clear"></div><!-- /.clear -->
 						</div><!-- /.wallArchiveGalleryImgInfo -->
 					</div><!-- /.wallArchiveGalleryImg -->
 					
+					<!-- 2 -->
 					<div class="wallArchiveGalleryImg">
-						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<a href="wallpapers/03_sumrak_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/03_201203_sumrak_220x133.jpg" alt="Sumrak 1920x1200" /></a>
 						<div class="wallArchiveGalleryImgInfo">
-							<a href="#">Pogled</a>
+							<a href="wallpapers/03_sumrak_full.jpg" rel="prettyPhoto">Pogled</a>
 							<p>ožujak 2012.</p>
 							<div class="clear"></div><!-- /.clear -->
 						</div><!-- /.wallArchiveGalleryImgInfo -->
 					</div><!-- /.wallArchiveGalleryImg -->
 					
+					<!-- 3 -->
 					<div class="wallArchiveGalleryImg">
-						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<a href="wallpapers/04_nebo_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/04_201203_nebo_220x133.jpg" alt="Nebo 1920x1200" /></a>
 						<div class="wallArchiveGalleryImgInfo">
-							<a href="#">Pogled</a>
+							<a href="wallpapers/04_nebo_full.jpg" rel="prettyPhoto">Pogled</a>
 							<p>ožujak 2012.</p>
 							<div class="clear"></div><!-- /.clear -->
 						</div><!-- /.wallArchiveGalleryImgInfo -->
 					</div><!-- /.wallArchiveGalleryImg -->
 					
+					<!-- 4 -->
 					<div class="wallArchiveGalleryImg no_mr">
-						<a href="#"><img src="http://lorempixum.com/220/133/nature/" /></a>
+						<a href="wallpapers/05_plaza_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/05_201203_plaza_220x133.jpg" alt="Plaza 1920x1200" /></a>
 						<div class="wallArchiveGalleryImgInfo">
-							<a href="#">Pogled</a>
+							<a href="wallpapers/05_plaza_full.jpg" rel="prettyPhoto">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<!-- 5 -->
+					<div class="wallArchiveGalleryImg">
+						<a href="wallpapers/06_palma2_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/06_201203_palma2_220x133.jpg" alt="Palma 1920x1200"/></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="wallpapers/06_palma2_full.jpg" rel="prettyPhoto">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<!-- 6 -->
+					<div class="wallArchiveGalleryImg">
+						<a href="wallpapers/07_brod_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/07_201203_brod_220x133.jpg" alt="Brod 1920x1200" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="wallpapers/07_brod_full.jpg" rel="prettyPhoto">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<!-- 7 -->
+					<div class="wallArchiveGalleryImg">
+						<a href="wallpapers/08_stijena_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/08_201203_stijena_220x133.jpg" alt="Stijena 1920x1200" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="wallpapers/08_stijena_full.jpg" rel="prettyPhoto">Pogled</a>
+							<p>ožujak 2012.</p>
+							<div class="clear"></div><!-- /.clear -->
+						</div><!-- /.wallArchiveGalleryImgInfo -->
+					</div><!-- /.wallArchiveGalleryImg -->
+					
+					<!-- 8 -->
+					<div class="wallArchiveGalleryImg no_mr">
+						<a href="wallpapers/09_zvijezde_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img src="images/wallring/wallpaper/09_201203_zvijezde_220x133.jpg" alt="Zvijezde 1920x1200" /></a>
+						<div class="wallArchiveGalleryImgInfo">
+							<a href="wallpapers/09_zvijezde_full.jpg" rel="prettyPhoto">Pogled</a>
 							<p>ožujak 2012.</p>
 							<div class="clear"></div><!-- /.clear -->
 						</div><!-- /.wallArchiveGalleryImgInfo -->
@@ -358,6 +378,40 @@
 		</div><!-- /footer_inner -->
 	</div><!-- /footer -->
 	
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$("#toggle_flag").hide();
+		$(".play").click(function(){
+			$("#toggle_flag").slideDown();
+			$(".jp-stop").click(function(){
+				$("#toggle_flag").slideUp();
+			})
+			$this = $(this);
+			var pjesmica 	= $this.attr("rel");
+			var songtitle = $this.siblings().eq(1).val();
+			var artist = $this.siblings().eq(2).val();
+			var album = $this.siblings().eq(3).val();
+			var poster		= $this.next().val();
+			$("#jquery_jplayer_1").jPlayer("setMedia", {
+				mp3: pjesmica + ".mp3",
+				ogg: pjesmica + ".ogg",
+				m4a: pjesmica + ".m4a"
+			}).jPlayer("play");
+			$(".dl").attr("href", pjesmica + ".mp3")
+			$("#poster_container").html("<img src='" + poster + "'/>")
+			$("#songtitle").html(songtitle)
+			$("#artist").html(artist)
+			$("#album").html(album)
+			return false;
+		})
+
+	})
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto();
+	  });
+	</script>
 </body><!-- end BODY -->
 
 </html>

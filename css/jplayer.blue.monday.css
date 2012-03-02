@@ -180,15 +180,13 @@ a.jp-next:hover {
 /* @end */
 
 /* poster */
-.jp_player_poster {position:absolute; left:240px; top:8px;}
+.jp_player_poster {position:absolute; left:0; top:8px;}
 .jp_player_poster img {border:2px solid #e43901; float:left; margin-right:10px;}
 
 /* jp-button */
-.jp-button {position:absolute; right:0; top:8px; width:310px;}
-.jp-button a.like {background:url(player_sprite.png) 0 -45px no-repeat; width:55px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
-.jp-button a.like:hover {background-position:0 -100px;}
-.jp-button a.dl {background:url(player_sprite.png) -55px -45px no-repeat; width:255px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
-.jp-button a.dl:hover {background-position:-55px -100px;}
+.jp-button {position:absolute; right:0; top:10px; width:310px;}
+.jp-button a.dl {background:url(player_sprite.png) 0 -45px no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
+.jp-button a.dl:hover {background-position:0 -100px;}
 
 /* jp-title */
 .jp-title p {font-size:0.9em;}
@@ -196,6 +194,10 @@ a.jp-next:hover {
 
 /* @group progress bar */
 
+div.jp-interfaceTop {
+	position:absolute;
+	left:365px;
+}
 div.jp-progress {
 	overflow:hidden;
 	background-color: #ddd;
@@ -206,9 +208,9 @@ div.jp-audio div.jp-progress {
 	height:5px;
 }
 div.jp-audio div.jp-type-single div.jp-progress {
-	left:0;
+	left:365px;
 	top:55px;
-	width:186px;
+	width:200px;
 }
 div.jp-audio div.jp-type-playlist div.jp-progress {
 	left:166px;
