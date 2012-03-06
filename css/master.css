@@ -354,6 +354,8 @@ ul.closeBtn {width:20px; overflow:hidden;}
 .wallcopyBL a.wallDLMKD:hover {background-position:bottom left;}
 .wallcopyBL a.wallDLALB {background:url(../images/wallring/buttons/btn_download_greenALB.png) top left no-repeat; width:244px; height:69px; display:block; text-indent:-9999em; overflow:hidden;}
 .wallcopyBL a.wallDLALB:hover {background-position:bottom left;}
+.wallcopyBL a.wallDLSLO {background:url(../images/wallring/buttons/btn_download_greenSLO.png) top left no-repeat; width:244px; height:69px; display:block; text-indent:-9999em; overflow:hidden;}
+.wallcopyBL a.wallDLSLO:hover {background-position:bottom left;}
 /* wall copy colors */
 .wcBLUE h2, .wcBLUE p {color:#031e33;}
 /* ringtone */

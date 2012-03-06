@@ -193,6 +193,8 @@ a.jp-next:hover {
 .jp-button a.dlMKD:hover {background-position:0 -55px;}
 .jp-button a.dlALB {background:url(dl_ring_alb.png) 0 0 no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
 .jp-button a.dlALB:hover {background-position:0 -55px;}
+.jp-button a.dlSLO {background:url(dl_ring_slo.png) 0 0 no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
+.jp-button a.dlSLO:hover {background-position:0 -55px;}
 
 /* jp-title */
 .jp-title p {font-size:0.9em;}
