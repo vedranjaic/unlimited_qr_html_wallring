@@ -56,7 +56,7 @@
 			ready: function () {
 				$(this).jPlayer("setMedia", {
 					mp3: "media/selinas_kpm_549_1400.mp3",
-					ogg: "media/selinas_kpm_549_1400.ogg",
+					oga: "media/selinas_kpm_549_1400.ogg",
 					m4a: "media/selinas_kpm_549_1400.m4a",
 					poster: "media/jeevan-anandasivam_50x50.jpg"
 				});
@@ -72,7 +72,7 @@
 	
 </head><!-- end HEAD -->
 
-<body>
+<body class="mkd">
 	
 	<div class="header_wrap">
 		<div class="header">
@@ -84,15 +84,15 @@
 					<li><a href="#">Odjavi se</a> &nbsp;|&nbsp; </li> -->
 				</ul>
 				<ul class="multiLanguage">
-					<li>Odaberite jezik:</li>
+					<li>Zgjedh gjuhën:</li>
 					<li><a href="index_gb.html"><img src="images/icons/language/gb.png"></a></li>
 					<li><a href="index_hr.html"><img src="images/icons/language/hr.png"></a></li><!-- klasa se mjenja ovisno o odabranom jeziku -->
 					<li><a href="index_ba.html"><img src="images/icons/language/ba.png"></a></li>
 					<li><a href="index_si.html"><img src="images/icons/language/si.png"></a></li>
 					<li><a href="index_rs.html"><img src="images/icons/language/rs.png"></a></li>
 					<li><a href="index_mk.html"><img src="images/icons/language/mk.png"></a></li>
-					<li><a href="index_me.html" class="currentLang"><img src="images/icons/language/me.png"></a></li>
-					<li><a href="index_al.html"><img src="images/icons/language/al.png"></a></li>
+					<li><a href="index_me.html"><img src="images/icons/language/me.png"></a></li>
+					<li><a href="index_al.html" class="currentLang"><img src="images/icons/language/al.png"></a></li>
 				</ul>
 			</div><!-- /multiBar -->
 			<div class="search">
@@ -106,9 +106,9 @@
 			</div><!-- /logo -->
 			<div class="menu">
 				<ul class="group" id="mainmenu">
-					<li class="current_page_item"><a href="#">Naslovnica</a></li>
-					<li><a href="gallery_me.html" id="idemo_van">Galerija wallpapera</a></li>
-					<li><a href="ringtones_me.html" id="poi">Ringtonovi</a></li>
+					<li><a href="index_al.html">KRYEFAQJA</a></li>
+					<li><a href="gallery_al.html" id="idemo_van">GALERIA</a></li>
+					<li class="current_page_item"><a href="#" id="poi">CINGËRRIMA</a></li>
 				</ul>
 			</div><!-- /menu -->
 		</div><!-- /menuBar -->
@@ -125,6 +125,7 @@
 					<ul class="closeBtn">
 						<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
 					</ul>
+					
 					<div class="jp-interfaceTop">
 						<ul class="jp-controls">
 							<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
@@ -148,11 +149,11 @@
                     <div class="jp-title">
 						<h5 id="songtitle">Selinas</h5>
 						<p id="artist">Jeevan Anandasivam</p>
-						<p id="album"><span>Album: </span>KPM 549</p>
+						<p id="album"><span>Albumi: </span>KPM 549</p>
 					</div>
 				</div><!-- /.jp_player_poster -->
 				<div class="jp-button">
-					<a href="#" class="dl dlME">Download</a>
+					<a href="#" class="dl dlALB">Download</a>
 				</div><!-- /.jp-button -->
 				<div class="jp-no-solution">
 					<span>Update Required</span>
@@ -171,15 +172,15 @@
 			<div id="wallindexTop">
 				<div class="wallindexTopL">
 					<div class="wallpaper">
-						<img src="images/wallring/wallpaper/01_201203_palma_620x375.jpg" />
+						<img src="images/wallring/ringtone_img_620x375.jpg" width="620" height="375" alt="Ringtones">
 					</div><!-- /.wallpaper -->
-					<div class="stickerNew">
+					<div class="stickerNew" style="visibility:hidden;">
 						<img src="images/wallring/sticker_new.png" />
 					</div><!-- /.stickerNew -->
-					<div class="wallcopy wallcopyBL wcBLUE">
-						<h2>Besplatno preuzmite wallpaper</h2>
-						<p>Svaki mesec očekuju vas nove pozadine koje možete da postavite na svoje računalo</p>
-						<a href="wallpapers/01_palma_full.jpg" rel="prettyPhoto" class="wallDL" title="Za preuzimanje slike desnim klikom odaberite Save image as..."></a><!-- /.wallDL -->
+					<div class="wallcopy wallcopyTR">
+						<h2>Shkarko këtë cingërrimë pa pagesë</h2>
+						<p>Prite nga një cingërrimë të re për çdo muaj, të bërë gati që ju ta shkarkoni në celularin tuaj</p>
+						<img src="images/wallring/ringtone_avail.png" width="150" height="50" alt="Ringtones available for iphone, android, blackberry, and many other mobile phones" />
 					</div><!-- /.wallcopy -->
 				</div><!-- /.wallindexTopL -->
 				<div class="wallindexTopR">
@@ -191,12 +192,12 @@
                             <input type="hidden" value="media/jeevan-anandasivam_50x50.jpg" />
 							<input type="hidden" value="Selinas" />
 							<input type="hidden" value="Jeevan Anandasivam" />
-							<input type="hidden" value="<span>Album: </span>KPM 549" />
+							<input type="hidden" value="<span>Albumi: </span>KPM 549" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
 							<h4 class="ringtoneRsong">Selinas</h4>
 							<p>Jeevan Anandasivam</p>
-							<p><span>Album: </span>KPM 549</p>
+							<p><span>Albumi: </span>KPM 549</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
@@ -207,12 +208,12 @@
                             <input type="hidden" value="media/adam-salkeld_50x50.jpg" />
 							<input type="hidden" value="Funk Fever" />
 							<input type="hidden" value="Adam Salkeld" />
-							<input type="hidden" value="<span>Album: </span>Essential House" />
+							<input type="hidden" value="<span>Albumi: </span>Essential House" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
 							<h4 class="ringtoneRsong">Funk Fever</h4>
 							<p>Adam Salkeld</p>
-							<p><span>Album: </span>Essential House</p>
+							<p><span>Albumi: </span>Essential House</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
@@ -223,12 +224,12 @@
                             <input type="hidden" value="media/andy-taylor_50x50.jpg" />
 							<input type="hidden" value="Paradise Luv" />
 							<input type="hidden" value="Andy Taylor" />
-							<input type="hidden" value="<span>Album: </span>ATV5 Sex" />
+							<input type="hidden" value="<span>Albumi: </span>ATV5 Sex" />
 						</div><!-- /.ringtoneL -->
 						<div class="ringtoneR">
 							<h4 class="ringtoneRsong">Paradise Luv</h4>
 							<p>Andy Taylor</p>
-							<p><span>Album: </span>ATV5 Sex</p>
+							<p><span>Albumi: </span>ATV5 Sex</p>
 						</div><!-- /.ringtoneR -->
 					</div><!-- /.ringtone -->
 					
@@ -240,95 +241,15 @@
 			
 			<div class="wallArchive">
 				<div class="wallArchiveTitle">
-					<h1>Arhiva wallpapera:</h1>
-					<ul>
-						<li class="gallery"><a href="gallery_me.html">Galerija</a></li>
+					<h1>Arkivi i cingërrimave:</h1>
+					<!-- <ul>
+						<li class="gallery"><a href="gallery_hr.html">Galerija</a></li>
 						<li class="coverflow"><a href="wallpapers/01_palma_full.jpg" rel="prettyPhoto[gallery]">Brzi pregled</a></li>
-					</ul>
+					</ul> -->
 					<div class="clear"></div><!-- /.clear -->
 				</div><!-- /.wallArchiveTitle -->
 				<div class="wallArchiveGallery">
-					<!-- 1 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/02_pijesak_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/02_201203_pijesak_220x133.jpg" alt="1920x1200"/></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/02_pijesak_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 2 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/03_sumrak_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/03_201203_sumrak_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/03_sumrak_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 3 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/04_nebo_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/04_201203_nebo_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/04_nebo_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 4 -->
-					<div class="wallArchiveGalleryImg no_mr">
-						<a href="wallpapers/05_plaza_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/05_201203_plaza_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/05_plaza_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 5 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/06_palma2_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/06_201203_palma2_220x133.jpg" alt="1920x1200"/></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/06_palma2_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 6 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/07_brod_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/07_201203_brod_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/07_brod_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 7 -->
-					<div class="wallArchiveGalleryImg">
-						<a href="wallpapers/08_stijena_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/08_201203_stijena_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/08_stijena_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<!-- 8 -->
-					<div class="wallArchiveGalleryImg no_mr">
-						<a href="wallpapers/09_zvijezde_full.jpg" rel="prettyPhoto[gallery]" title="Za preuzimanje slike desnim klikom odaberite Save image as..."><img class="image2" src="images/wallring/wallpaper/09_201203_zvijezde_220x133.jpg" alt="1920x1200" /></a>
-						<div class="wallArchiveGalleryImgInfo">
-							<a href="wallpapers/09_zvijezde_full.jpg" rel="prettyPhoto">Pogled</a>
-							<p>ožujak 2012.</p>
-							<div class="clear"></div><!-- /.clear -->
-						</div><!-- /.wallArchiveGalleryImgInfo -->
-					</div><!-- /.wallArchiveGalleryImg -->
-					
-					<div class="clear"></div><!-- /.clear -->
+					<p class="success_info">Aktualisht nuk ka asnjë pagesë në arkiv</p><!-- /.success_info -->
 				</div><!-- /.wallArchiveGallery -->
 			</div><!-- /.wallArchive -->
 		</div><!-- /main_container -->
@@ -341,24 +262,24 @@
 			<div class="footerLMR">
 				<div class="footerL">
 					<ul>
-						<li class="top"><h6 class="footmenu">Menu</h6></li>
-						<li><a href="#" class="foothome">Naslovnica</a></li>
-						<li><a href="gallery_me.html" class="footgallery">Galerija wallpapera</a></li>
-						<li class="no_bg"><a href="ringtones_me.html" class="footring">Ringtonovi</a></li>
+						<li class="top"><h6 class="footmenu">MENY</h6></li>
+						<li><a href="index_al.html" class="foothome">KRYEFAQJA</a></li>
+						<li><a href="gallery_al.html" class="footgallery">GALERIA</a></li>
+						<li class="no_bg"><a href="#" class="footring">CINGËRRIMA</a></li>
 					</ul>
 				</div><!-- /footerL -->
 				<div class="footerM">
 					<ul>
-						<li class="top"><h6 class="footinfo">Korisnička podrška</h6></li>
-						<li><p class="footkontakt">Kontakt</p></li>
+						<li class="top"><h6 class="footinfo">MBËSHTETJA PËR KLIENTIN</h6></li>
+						<li><p class="footkontakt">KONTAKTO</p></li>
 						<li class="no_bg"><p class="normal">tel: +385 52 844 000</p></li>
 						<li class="no_bg"><p class="normal">fax: +385 52 844 470</p></li>
-						<li><p class="footversion">Verzija stranice</p></li>
+						<li><p class="footversion">VERSIONI I WEBSAJTIT</p></li>
 						<li class="no_bg">
 							<ul class="onchange">
 								<li class="no_bg"><p class="normal">Normal</p></li>
 								<li class="no_bg no_mr"><input type="checkbox" id="on_off" /></li>
-								<li class="no_bg"><p class="normal">Mobile</p></li>
+								<li class="no_bg"><p class="normal">Mobil</p></li>
 							</ul>
 						</li>
 					</ul>
@@ -366,7 +287,7 @@
 				</div><!-- footerM -->
 				<div class="footerR">
 					<ul>
-						<li class="top"><h6 class="footinfo">Povežite se s nama</h6></li>
+						<li class="top"><h6 class="footinfo">LIDHU ME NE</h6></li>
 						<li class="no_bg"><a href="http://www.facebook.com/TDR.Rovinj" class="fbicon" target="_blank">Facebook</a><a href="http://www.youtube.com/TvornicaDuhanaRovinj" class="yticon" target="_blank">Youtube</a></li>
 					</ul>
 				</div><!-- footerR -->
@@ -375,7 +296,7 @@
 			</div><!-- /footerLMR -->
 
 			<div class="copy">
-				<p>&copy; Unlimited QR 2012.  &bull;  Sva prava pridržana</p>
+				<p>&copy; Unlimited QR 2012.  &bull;  Të gjitha të drejtat e rezervuara</p>
 			</div><!-- /copy -->
 		</div><!-- /footer_inner -->
 	</div><!-- /footer -->
@@ -400,7 +321,7 @@
 			console.log($this);
 			$("#jquery_jplayer_1").jPlayer("setMedia", {
 				mp3: pjesmica + ".mp3",
-				ogg: pjesmica + ".ogg",
+				oga: pjesmica + ".ogg",
 				m4a: pjesmica + ".m4a"
 			}).jPlayer("play");
 			$(".dl").attr("href", pjesmica + ".mp3")

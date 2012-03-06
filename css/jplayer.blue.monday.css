@@ -156,7 +156,9 @@ a.jp-stop, a.jp-previous, a.jp-next {
 
 a.jp-stop {
 	background: url("jplayer.blue.monday.png") 0 -83px no-repeat;
-	margin-left:10px;
+	display:block;
+	text-indent:-9999em;
+	margin-left:-10px;
 }
 
 a.jp-stop:hover {
@@ -180,13 +182,17 @@ a.jp-next:hover {
 /* @end */
 
 /* poster */
-.jp_player_poster {position:absolute; left:0; top:8px;}
+.jp_player_poster {position:absolute; left:30px; top:8px;}
 .jp_player_poster img {border:2px solid #e43901; float:left; margin-right:10px;}
 
 /* jp-button */
 .jp-button {position:absolute; right:0; top:10px; width:310px;}
-.jp-button a.dl {background:url(player_sprite.png) 0 -45px no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
-.jp-button a.dl:hover {background-position:0 -100px;}
+.jp-button a.dlME {background:url(dl_ring.png) 0 0 no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
+.jp-button a.dlME:hover {background-position:0 -55px;}
+.jp-button a.dlMKD {background:url(dl_ring_mkd.png) 0 0 no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
+.jp-button a.dlMKD:hover {background-position:0 -55px;}
+.jp-button a.dlALB {background:url(dl_ring_alb.png) 0 0 no-repeat; width:310px; height:55px; display:inline-block; text-indent:-9999em; overflow:hidden;}
+.jp-button a.dlALB:hover {background-position:0 -55px;}
 
 /* jp-title */
 .jp-title p {font-size:0.9em;}
@@ -197,6 +203,7 @@ a.jp-next:hover {
 div.jp-interfaceTop {
 	position:absolute;
 	left:365px;
+	top:0;
 }
 div.jp-progress {
 	overflow:hidden;
